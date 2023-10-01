@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ControlFlow {
     static public void main (String[] args){
-        System.out.println("Welcome to Control Flow");
+        System.out.println("Filtering out expletives");
         String sentence = "";
         try (Scanner scanner = new Scanner(System.in)) {
             while (!sentence.toLowerCase().equals("exit")){
@@ -32,11 +32,11 @@ public class ControlFlow {
 
     static public String replaceExpletives (String message){
         String [] curseWords = {"fuck", "bitch", "shit", "ass", "motherfucker"};
-        String [] array = message.toLowerCase().split(" ");
+        String [] array = message.split(" ");
         String newMessage = "";
         for (String expletive : curseWords){
             for (int i=0; i<array.length; i++){
-                if (array[i].contains(expletive)){
+                if (array[i].toLowerCase().contains(expletive)){
                     array[i]="*****";
                 }
             }
