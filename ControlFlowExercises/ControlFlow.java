@@ -31,12 +31,13 @@ public class ControlFlow {
     }
 
     static public String replaceExpletives (String message){
-        String [] curseWords = {"fuck", "bitch", "shit", "ass", "motherfucker"};
+        String [] curseWords = {"fuck", "bitch", "shit", "ass", "motherfucker", "dick"};
         String [] array = message.split(" ");
         String newMessage = "";
         for (String expletive : curseWords){
             for (int i=0; i<array.length; i++){
                 if (array[i].toLowerCase().contains(expletive)){
+                    System.out.println(array[i].lastIndexOf(expletive));
                     array[i]="*****";
                 }
             }

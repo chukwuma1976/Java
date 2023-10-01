@@ -11,7 +11,7 @@ public class Expletives {
     }
 
     static public String replaceExpletives (String message){
-        String [] curseWords = {"fuck", "bitch", "shit", "ass", "motherfucker"};
+        String [] curseWords = {"fuck", "bitch", "shit", "ass", "motherfucker", "dick"};
         String [] array = message.split(" ");
         String newMessage = "";
         for (String expletive : curseWords){
