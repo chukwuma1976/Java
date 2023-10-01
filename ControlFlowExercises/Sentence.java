@@ -1,6 +1,6 @@
 package ControlFlowExercises;
 
-public class Expletives {
+public class Sentence {
 
     static public boolean screenForExpletives (String message){
         String [] curseWords = {"fuck", "bitch", "shit", "ass"};
@@ -11,13 +11,16 @@ public class Expletives {
     }
 
     static public String replaceExpletives (String message){
-        String [] curseWords = {"fuck", "bitch", "shit", "ass", "motherfucker", "dick"};
+        String [] curseWords = {"fuck", "bitch", "shit", "ass", "dick"};
         String [] array = message.split(" ");
         String newMessage = "";
         for (String expletive : curseWords){
             for (int i=0; i<array.length; i++){
                 if (array[i].toLowerCase().contains(expletive)){
-                    array[i]="*****";
+                    int startIndex = Math.max(array[i].indexOf(expletive), 0);
+                    int endIndex = startIndex + expletive.length();
+                    StringBuilder censored = new StringBuilder(array[i]);
+                    array[i] = censored.replace(startIndex, endIndex, "@#%**!").toString();
                 }
             }
         }
@@ -25,5 +28,5 @@ public class Expletives {
             newMessage = newMessage + " " + word;
         }
         return newMessage;
-    }
+    }    
 }
