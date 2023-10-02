@@ -1,9 +1,9 @@
 package ControlFlowExercises;
 
 public class Sentence {
+    static String [] curseWords = {"fuck", "bitch", "shit", "ass", "dick"};
 
     static public boolean screenForExpletives (String message){
-        String [] curseWords = {"fuck", "bitch", "shit", "ass"};
         for (String expletive : curseWords){
             if (message.toLowerCase().contains(expletive)) return true;
         }
@@ -11,22 +11,15 @@ public class Sentence {
     }
 
     static public String replaceExpletives (String message){
-        String [] curseWords = {"fuck", "bitch", "shit", "ass", "dick"};
-        String [] array = message.split(" ");
-        String newMessage = "";
+        StringBuilder newMessage = new StringBuilder(message);
         for (String expletive : curseWords){
-            for (int i=0; i<array.length; i++){
-                if (array[i].toLowerCase().contains(expletive)){
-                    int startIndex = Math.max(array[i].indexOf(expletive), 0);
-                    int endIndex = startIndex + expletive.length();
-                    StringBuilder censored = new StringBuilder(array[i]);
-                    array[i] = censored.replace(startIndex, endIndex, "@#%**!").toString();
-                }
+            if (newMessage.toString().toLowerCase().contains(expletive)){
+                int startIndex = Math.max(newMessage.toString().indexOf(expletive), 0);
+                int endIndex = startIndex + expletive.length();
+                newMessage = newMessage.replace(startIndex, endIndex, "@#%**!");
             }
         }
-        for (String word : array){
-            newMessage = newMessage + " " + word;
-        }
-        return newMessage;
+
+        return newMessage.toString();
     }    
 }
