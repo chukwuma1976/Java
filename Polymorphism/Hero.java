@@ -1,4 +1,4 @@
-package Inheritance;
+package Polymorphism;
 
 public class Hero {
     String name, alterEgo, powers, weapons;
@@ -17,7 +17,16 @@ public class Hero {
             "\n Weapons: " + weapons;
     }
 
-    public void printProfile (){
-        System.out.println(this.generateProfile());
+    //Overloaded method
+    public String generateProfile(String catchPhrase){
+        return "Code name: " + name + 
+            "\n Alter ego: " + alterEgo + 
+            "\n Powers: " + powers + 
+            "\n Weapons: " + weapons +
+            "\n Catch Phrase: " + catchPhrase;
+    }
+
+    public String addPowers (String power){
+        return powers + " " + power;
     }
 }
