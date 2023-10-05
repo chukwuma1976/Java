@@ -1,47 +1,39 @@
 package Strings;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     static public void main (String[] args){
         try (Scanner scanner = new Scanner(System.in)) {
-            // System.out.print("Enter something: ");
-            // String input = scanner.nextLine();
-            // System.out.println("The integer is: "+StringMethods.convertToInteger(input));
-            // System.out.println("******************************");
-
-            // System.out.print("Enter an integer: ");
-            // int number = scanner.nextInt();
-            // System.out.println("The string is: "+StringMethods.convertToString(number));
-            // System.out.println("******************************");
-
-            // System.out.print("Enter a string: ");
-            // String phrase = scanner.nextLine();
-            // System.out.println(StringMethods.isPalindrome(phrase)? "This is a palindrome":"This is not a palindrome");
-            // System.out.println("******************************");
-
-            // System.out.print("Enter a string: ");
-            // String entry1 = scanner.nextLine();
-            // System.out.print("Enter another string: ");
-            // String entry2 = scanner.nextLine();
-            // System.out.println(StringMethods.compareStrings(entry1, entry2)? "These strings are the same":"These strings are different");
-            // System.out.println("******************************");
-
-            // System.out.print("Enter a string: ");
-            // String thisString = scanner.nextLine();
-            // System.out.print("Enter starting index for substring: ");
-            // int start = scanner.nextInt();
-            // System.out.print("Enter end index for substring: ");
-            // int end = scanner.nextInt();
-            // System.out.println("The substring for " + thisString + " is : " + StringMethods.returnSubstring(thisString, start, end));
-            // System.out.println("The substring for " + thisString + "starting at "+ start + " is : " + StringMethods.returnSubstring(thisString, start));
-            // System.out.println("******************************");
-
-            System.out.print("Enter a snake cased string: ");
-            String snaked = scanner.nextLine();
-            System.out.println("Your new non snake cased string is: " + StringMethods.removeUnderscoreReplaceWithSpaces(snaked));
-            System.out.println("******************************");
-        }
-
+                System.out.println("Please enter a number below to use a string method.");
+                System.out.println("Enter 1 to convert a number to a string.");
+                System.out.println("Enter 2 to convert a string to a number.");
+                System.out.println("Enter 3 to test if a string is a palindrome.");
+                System.out.println("Enter 4 to compare two strings.");
+                System.out.println("Enter 5 to compare return a substring.");
+                System.out.println("Enter 6 to replace underscores with spaces.");
+                System.out.print("Enter 7 to remove white spaces from a string.  ");
+                int choice = scanner.nextInt();
+                System.out.println();
+                switch(choice){
+                    case 1: UseStringMethods.convertToString();
+                        break;
+                    case 2: UseStringMethods.convertToInteger();
+                        break;
+                    case 3: UseStringMethods.isPalindrome();
+                        break;
+                    case 4: UseStringMethods.compareStrings();
+                        break;
+                    case 5: UseStringMethods.returnSubstring();
+                        break;
+                    case 6: UseStringMethods.removeUnderscoreReplaceWithSpaces();
+                        break;
+                    case 7: UseStringMethods.removeWhiteSpaces();
+                        break;
+                    case 9:
+                        break;
+                    default: System.out.println("Please enter a valid number");
+                }
+        } 
     }
 }

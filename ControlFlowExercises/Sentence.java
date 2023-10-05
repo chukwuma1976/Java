@@ -1,7 +1,7 @@
 package ControlFlowExercises;
 
 public class Sentence {
-    static String [] curseWords = {"fuck", "bitch", "shit", "ass", "dick"};
+    static String [] curseWords = {"fuck", "bitch", "shit", "ass", "dick", "pussy"};
 
     static public boolean screenForExpletives (String message){
         for (String expletive : curseWords){

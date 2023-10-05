@@ -15,7 +15,6 @@ public class StringMethods {
         int start = 0;
         int end = input.length()-1;
         while (start<=end){
-            System.out.println(input.charAt(start) + " != " + input.charAt(end) + " is " + (input.charAt(start)!=input.charAt(end)));
             if (input.charAt(start)!=input.charAt(end)) return false;
             start++;
             end--; 
@@ -37,6 +36,10 @@ public class StringMethods {
 
     static String removeUnderscoreReplaceWithSpaces(String input){
         return input.replace('_', ' ');
+    }
+
+    static String removeWhiteSpaces(String input){
+        return input.trim();
     }
 
 }
