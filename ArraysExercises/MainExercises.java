@@ -30,10 +30,12 @@ class MainExercises {
         //Use of sort method
         int[] randomNumbers = {9,3,6,2,6,3,7,2,7,8,9};
         Arrays.sort(randomNumbers);
+        Arrays.stream(randomNumbers).forEach(System.out::print);
+        System.err.println();
 
         //Use of stream(array) method
         System.out.println(Arrays.toString(randomNumbers));
-        Arrays.stream(randomNumbers).map(number->number*2).forEach(System.out::println);
+        Arrays.stream(randomNumbers).map(number->number*2).forEach(System.out::print);
 
 
     }

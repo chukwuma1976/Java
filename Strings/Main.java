@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
     static public void main (String[] args){
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("these nuts".concat(" in your face."));
                 System.out.println("Please enter a number below to use a string method.");
                 System.out.println("Enter 1 to convert a number to a string.");
                 System.out.println("Enter 2 to convert a string to a number.");
