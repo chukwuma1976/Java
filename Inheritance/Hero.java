@@ -12,12 +12,12 @@ public class Hero {
 
     public String generateProfile (){
         return "Code name: " + name + 
-            "\n Alter ego: " + alterEgo + 
-            "\n Powers: " + powers + 
-            "\n Weapons: " + weapons;
+            "\nAlter ego: " + alterEgo + 
+            "\nPowers: " + powers + 
+            "\nWeapons: " + weapons;
     }
 
     public void printProfile (){
-        System.out.println(this.generateProfile());
+        System.out.println(this.generateProfile() + "\n");
     }
 }

@@ -12,7 +12,8 @@ public class Main {
                 System.out.println("Enter 4 to compare two strings.");
                 System.out.println("Enter 5 to compare return a substring.");
                 System.out.println("Enter 6 to replace underscores with spaces.");
-                System.out.print("Enter 7 to remove white spaces from a string.  ");
+                System.out.println("Enter 7 to remove white spaces from a string.  ");
+                System.out.println("Enter 8 to translate word to pig latin.  ");
                 int choice = scanner.nextInt();
                 System.out.println();
                 switch(choice){
@@ -30,7 +31,7 @@ public class Main {
                         break;
                     case 7: UseStringMethods.removeWhiteSpaces();
                         break;
-                    case 9:
+                    case 8: UseStringMethods.returnPigLatin();
                         break;
                     default: System.out.println("Please enter a valid number");
                 }

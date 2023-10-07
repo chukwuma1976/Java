@@ -42,4 +42,10 @@ public class StringMethods {
         return input.trim();
     }
 
+    static String returnPigLatin(String input){
+        String pig_latin = input.substring(1, input.length()).concat(input.charAt(0) + "ay");
+        return pig_latin;
+
+    }
+
 }
