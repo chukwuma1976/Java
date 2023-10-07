@@ -18,8 +18,5 @@ public class Main {
         List<String> superheroes = Arrays.asList("Superman", "Wonder Woman", "Batman", "The Flash", "Cyborg", "Aquaman");
         superheroes.stream().map(String::toUpperCase).forEach(System.out::println);
 
-        List<String> expletives = List.of("fuck", "dick", "pussy", "ass", "shit");
-        expletives.stream().map(String::toUpperCase).forEach(System.out::println);;
-
     }
 }
