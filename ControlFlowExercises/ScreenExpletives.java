@@ -18,8 +18,6 @@ public class ScreenExpletives {
                     System.out.println(Sentence.replaceExpletives(sentence));
                 }
                 System.out.println();
-                Sentence sent = new Sentence();
-                System.out.println(sent.screenForExpletives("These nuts in your face"));
             }
         }
     }
