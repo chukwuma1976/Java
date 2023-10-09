@@ -11,15 +11,18 @@ public class Sentence {
     }
 
     static public String replaceExpletives (String message){
-        StringBuilder newMessage = new StringBuilder(message);
+        String replaced = message;
         for (String expletive : curseWords){
-            if (newMessage.toString().toLowerCase().contains(expletive)){
-                int startIndex = Math.max(newMessage.toString().indexOf(expletive), 0);
-                int endIndex = startIndex + expletive.length();
-                newMessage = newMessage.replace(startIndex, endIndex, "@#%**!");
+            if (message.contains(expletive)){
+                replaced = replaced.replaceAll(expletive, replacement(expletive));
             }
         }
-
-        return newMessage.toString();
+        return replaced;
     }    
+
+    static public String replacement (String expletive){
+        String str = "";
+        for (int i=0; i<expletive.length(); i++) str += "@";
+        return str;
+    }
 }
