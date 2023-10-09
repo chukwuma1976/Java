@@ -24,7 +24,7 @@ class MainExercises {
 
         //Use of fill() method
         String[] theseNuts = new String[12];
-        Arrays.fill(theseNuts, "I'm hired!");
+        Arrays.fill(theseNuts, "I've been hired by FDM bitches!");
         System.out.println(Arrays.toString(theseNuts));
 
         //Use of sort method
