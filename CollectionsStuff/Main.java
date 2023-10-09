@@ -34,9 +34,9 @@ public class Main {
         family.put("Father", "Barna Anyadike");
         family.put("Mother", "Helen Anyadike");
         family.put("Oldest Son", "Chukwuma 'Slick As A Puma' Anyadike");
-        family.put("First Brother", "Uzoma Chuddy Anyadike");
-        family.put("Second Brother", "Emeka Anyadike");
-        family.put("Third Brother", "Chika Anyadike");
+        family.put("1st Brother", "Uzoma Chuddy Anyadike");
+        family.put("2nd Brother", "Emeka Anyadike");
+        family.put("3rdBrother", "Chika Anyadike");
         family.put("Sister", "Kechi Anyadike");
         family.put("Ex Wife", "Adwoa");
 
@@ -44,7 +44,7 @@ public class Main {
         System.out.println(family.keySet());
         System.out.println(family.values());
         family.remove("Ex Wife");
-        family.put("Oldest Grandchild", "Afua Anyadike");
+        family.put("Grandchild", "Afua Anyadike");
 
         for (String key : family.keySet())System.out.println(key +": \t" + family.get(key));
 
