@@ -22,7 +22,7 @@ public class Sentence {
 
     static public String replacement (String expletive){
         String str = "";
-        for (int i=0; i<expletive.length(); i++) str += "@";
+        for (int i=0; i<expletive.length(); i++) str += "!";
         return str;
     }
 }
