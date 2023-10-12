@@ -14,7 +14,10 @@ public class Main {
                 System.out.println(number + (Numbers.isPrimeNumber(number)?" is a prime number.":" is not a prime number."));
                 System.out.println("The divisors of " + number + " are: " + Numbers.getDivisors(number));
                 System.out.println(number + "! equals: " + Numbers.factorial(number));
-                System.out.println("Fibonacci sequence for " + number + " is:" + Numbers.fibonacci(number));
+                System.out.println("Fibonacci sequence for the first " + number + " numbers is:" + Numbers.fibonacci(number));
+                System.out.println("Tribonacci sequence for the first " + number + " numbers is:" + Numbers.tribonacci(number));
+                System.out.println("Geometric (squared) sequence for the first " + number + " numbers is:" + Numbers.geometric(number));
+                System.out.println("Factorial sequence for the first " + number + " numbers is:" + Numbers.factorialSequency(number));
                 System.out.println();
             }
         }

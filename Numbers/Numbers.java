@@ -35,4 +35,32 @@ public class Numbers {
 
         return divisors;
     }
+
+    static List<Integer> tribonacci (int number){
+        List<Integer> trib = new ArrayList<>();
+        trib.add(0);
+        trib.add(1);
+        trib.add(1);
+
+        for (int i=3; i<number; i++){
+            trib.add(trib.get(i-3)+trib.get(i-2)+trib.get(i-1));
+        }        
+        return trib;
+    }
+
+    static List<Integer> geometric (int number){
+        List<Integer> geo = new ArrayList<>();
+        for (int i=1; i<number; i++){
+            geo.add((int)Math.pow(i,2));
+        }
+        return geo;
+    }
+
+    static List<Long> factorialSequency (int number){
+        List<Long> factorials = new ArrayList<>(number);
+        for (int i=1; i<number; i++){
+            factorials.add(Numbers.factorial(i));
+        }
+        return factorials;
+    }
 }
