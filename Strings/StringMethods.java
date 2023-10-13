@@ -1,5 +1,8 @@
 package Strings;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class StringMethods {
     
     static int convertToInteger(String input){
@@ -47,5 +50,21 @@ public class StringMethods {
         return pig_latin;
 
     }
+
+    static char recurringChar(String str) {
+        Map<Character, Integer> characters = new HashMap<>();
+        int highest = 0;
+        Character mostCommon = null;
+        for (Character character : str.toCharArray()){
+            if (characters.get(character)==null) characters.put(character, 1);
+                else characters.put(character, characters.get(character)+1);
+
+            if (characters.get(character)>highest) mostCommon = character;
+
+            highest = Math.max(characters.get(character), highest);
+        }
+        return mostCommon;
+    }
+
 
 }

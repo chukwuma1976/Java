@@ -15,7 +15,9 @@ public class Numbers {
     static List<Integer> fibonacci (int number){
         List<Integer> fib = new ArrayList<>();
         fib.add(0);
+        if (number==1) return fib;
         fib.add(1);
+        if (number==2) return fib;
         for (int i=2; i<number; i++){
             fib.add(fib.get(i-2)+fib.get(i-1));
         }        
@@ -24,6 +26,7 @@ public class Numbers {
 
     static long factorial (int number){
         if (number == 1) return 1;
+        if (number > 20) return Long.MAX_VALUE;
         return number * (factorial(number-1));
     }
 
@@ -39,8 +42,11 @@ public class Numbers {
     static List<Integer> tribonacci (int number){
         List<Integer> trib = new ArrayList<>();
         trib.add(0);
+        if (number == 1) return trib;
         trib.add(1);
+        if (number == 2) return trib;
         trib.add(1);
+        if (number == 3) return trib;
 
         for (int i=3; i<number; i++){
             trib.add(trib.get(i-3)+trib.get(i-2)+trib.get(i-1));
@@ -48,17 +54,17 @@ public class Numbers {
         return trib;
     }
 
-    static List<Integer> geometric (int number){
-        List<Integer> geo = new ArrayList<>();
-        for (int i=1; i<number; i++){
-            geo.add((int)Math.pow(i,2));
+    static List<Integer> quadratic (int number){
+        List<Integer> squared = new ArrayList<>();
+        for (int i=1; i<=number; i++){
+            squared.add((int)Math.pow(i,2));
         }
-        return geo;
+        return squared;
     }
 
-    static List<Long> factorialSequency (int number){
+    static List<Long> factorialSequence (int number){
         List<Long> factorials = new ArrayList<>(number);
-        for (int i=1; i<number; i++){
+        for (int i=1; i<=number; i++){
             factorials.add(Numbers.factorial(i));
         }
         return factorials;
