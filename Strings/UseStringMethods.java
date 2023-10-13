@@ -79,7 +79,7 @@ public class UseStringMethods {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter a word: ");
             String word = scanner.nextLine();
-            System.out.println("The pig latin for: "+ word +" is '" + StringMethods.recurringChar(word)+"'");
+            System.out.println("The most commonly recurring character is: "+ word +" is '" + StringMethods.recurringChar(word)+"'");
         }        
     }
 
