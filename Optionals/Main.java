@@ -10,7 +10,7 @@ public class Main {
             String inputted = scanner.nextLine();
             if (inputted.isEmpty()) inputted = null;
             Optional<String> input = Optional.ofNullable(inputted);
-            
+
             System.out.println();
             System.out.println("Using Optionals methods isPresent and isEmpty which are boolean");
             System.out.println("Value is present: " + input.isPresent());
