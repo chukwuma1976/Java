@@ -11,12 +11,15 @@ public class ScreenExpletives {
                 System.out.println("Please enter a sentence or type exit to end this.");
                 sentence = scanner.nextLine();
                 System.out.println("The phrase that you entered is: " + sentence);
-                System.out.println(Sentence.screenForExpletives(sentence) ? "There is at least one expletive" : "This sentence is clean");
+
                 if (Sentence.screenForExpletives(sentence)){
+                    System.out.println();
+                    System.out.println(Sentence.screenForExpletives(sentence) ? ("There are " + Sentence.countExpletivesInSentence(sentence) + " expletives.") : "");
+                    System.out.println("These are the expletives that you used: "+Sentence.returnListOfExpletivesInSentence(sentence));
                     System.out.println();
                     System.out.println("Here is your censored sentence: ");
                     System.out.println(Sentence.replaceExpletives(sentence));
-                }
+                } else System.out.println("This sentence is clean.");
                 System.out.println();
             }
         }
