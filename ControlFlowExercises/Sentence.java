@@ -55,7 +55,7 @@ public class Sentence {
         return count;
     }
 
-    static Set<String> returnListOfExpletivesInSentence(String sentence){
+    static List<String> returnListOfExpletivesInSentence(String sentence){
         Set<String> list = new HashSet<>();
         String [] wordList = sentence.split(" ");
         for (String word : wordList){
@@ -63,6 +63,6 @@ public class Sentence {
                 if (word.contains(expletive)) list.add(expletive);
             }
         }
-        return list;
+        return new ArrayList<>(list);
     }
 }
