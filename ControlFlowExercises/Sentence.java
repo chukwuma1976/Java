@@ -39,7 +39,7 @@ public class Sentence {
         System.out.println();
     }
 
-    static List<String> returnListOfExpletives(){
+    public static List<String> returnListOfExpletives(){
         Arrays.sort(curseWords);
         return List.of(curseWords);
     }
