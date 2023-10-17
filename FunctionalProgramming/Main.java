@@ -24,8 +24,8 @@ public class Main {
         // System.out.println(threeX);
         // System.out.println(negative);
 
-        // List<String> superheroes = Arrays.asList("Superman", "Wonder Woman", "Batman", "The Flash", "Cyborg", "Aquaman");
-        // superheroes.stream().map(String::toUpperCase).forEach(System.out::println);
+        List<String> superheroes = Arrays.asList("Superman", "Wonder Woman", "Batman", "The Flash", "Cyborg", "Aquaman");
+        superheroes.stream().map(String::toUpperCase).forEach(System.out::println);
 
         Function<String, String> addMyNuts = phrase -> phrase + " my nuts!";
         Function<String, String> addBitch = phrase -> phrase + " Bitch!";
