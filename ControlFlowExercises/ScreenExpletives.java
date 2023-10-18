@@ -14,8 +14,9 @@ public class ScreenExpletives {
 
                 if (Sentence.screenForExpletives(sentence)){
                     System.out.println();
-                    System.out.println(Sentence.screenForExpletives(sentence) ? ("There are " + Sentence.countExpletivesInSentence(sentence) + " words with expletives.") : "");
-                    System.out.println("These are the expletives that you used: "+Sentence.returnListOfExpletivesInSentence(sentence));
+                    System.out.println(Sentence.screenForExpletives(sentence) ? ("There are " + Sentence.countExpletives(sentence) + " words with expletives.") : "");
+                    System.out.println("These are the expletives that you used: " + Sentence.returnListOfExpletives(sentence));
+                    System.out.println("Here is the count of each expletive used: " + Sentence.provideCountOfEachExpletive(sentence));
                     System.out.println();
                     System.out.println("Here is your censored sentence: ");
                     System.out.println(Sentence.replaceExpletives(sentence));

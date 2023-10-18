@@ -44,7 +44,7 @@ public class Sentence {
         return List.of(curseWords);
     }
 
-    public static int countExpletivesInSentence(String sentence){
+    public static int countExpletives(String sentence){
         String [] wordList = sentence.split(" ");
         int count = 0;
         for (String word : wordList){
@@ -55,7 +55,22 @@ public class Sentence {
         return count;
     }
 
-    public static List<String> returnListOfExpletivesInSentence(String sentence){
+    public static Map<String, Integer> provideCountOfEachExpletive(String sentence){
+        Map<String, Integer> expletiveMap = new HashMap<>();
+        String [] wordList = sentence.split(" ");
+        for (String word : wordList){
+            for (String expletive : curseWords){
+                if (word.contains(expletive)){
+                    if (expletiveMap.get(expletive)==null)
+                        expletiveMap.put(expletive, 1);
+                        else expletiveMap.put(expletive, expletiveMap.get(expletive)+1);
+                }
+            }
+        }        
+        return expletiveMap;
+    }
+
+    public static List<String> returnListOfExpletives(String sentence){
         Set<String> list = new HashSet<>();
         String [] wordList = sentence.split(" ");
         for (String word : wordList){
@@ -65,4 +80,5 @@ public class Sentence {
         }
         return new ArrayList<>(list);
     }
+    
 }
