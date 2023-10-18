@@ -1,4 +1,7 @@
 package FunctionalProgramming;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -51,5 +54,7 @@ public class Main {
 
         Supplier<List<String>> expletives = ()-> Sentence.returnListOfExpletives();
         System.out.println(expletives.get());
+        System.out.println(LocalDate.now());
+        System.out.println(LocalDate.of(1976, 8, 14));
     }
 }
