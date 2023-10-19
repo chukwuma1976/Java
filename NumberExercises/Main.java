@@ -32,6 +32,7 @@ public class Main {
         System.out.println("Cos 45: " + Math.cos(radians));
         System.out.println("Sin 45: " + Math.sin(radians));
         System.out.println("Tan 45: " + Math.tan(radians));
+        System.out.println("Random Number: " + Math.round(Math.random()*10));
     }
 
 }
