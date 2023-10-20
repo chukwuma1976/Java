@@ -16,7 +16,6 @@ public class Main {
                 System.out.println("Enter 7 to remove white spaces from a string.  ");
                 System.out.println("Enter 8 to translate word to pig latin.  ");
                 System.out.println("Enter 9 to get most common recurring character.  ");
-                System.out.println("Or Enter 0 to exit");
                 int choice = scanner.nextInt();
                 System.out.println();
                 switch(choice){
