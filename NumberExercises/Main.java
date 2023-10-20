@@ -34,11 +34,10 @@ public class Main {
         System.out.println("Tan 45: " + Math.tan(radians));
         System.out.println("Random Number: " + Math.round(Math.random()*10));
 
-        System.out.println(Integer.toHexString(65));
-        System.out.println(Integer.parseInt("5"));
+        System.out.println(Integer.toHexString(65));  //convert integer to hexadecimal string
         System.out.println(Integer.valueOf("230", 5));
         System.out.println(Float.isNaN(2.2f));
-        System.out.println(Integer.valueOf(1).equals(Long.valueOf(1)));
+        System.out.println(Integer.valueOf(1).equals(Long.valueOf(1))); //will be false since types are different
 
     }
 
