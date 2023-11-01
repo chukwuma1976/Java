@@ -49,7 +49,7 @@ public class Sentence {
         int count = 0;
         for (String word : wordList){
             for (String expletive : curseWords){
-                if (word.contains(expletive)) count++;
+                if (word.toLowerCase().contains(expletive)) count++;
             }
         }
         return count;
@@ -60,7 +60,7 @@ public class Sentence {
         String [] wordList = sentence.split(" ");
         for (String word : wordList){
             for (String expletive : curseWords){
-                if (word.contains(expletive)){
+                if (word.toLowerCase().contains(expletive)){
                     if (expletiveMap.get(expletive)==null)
                         expletiveMap.put(expletive, 1);
                         else expletiveMap.put(expletive, expletiveMap.get(expletive)+1);
@@ -75,7 +75,7 @@ public class Sentence {
         String [] wordList = sentence.split(" ");
         for (String word : wordList){
             for (String expletive : curseWords){
-                if (word.contains(expletive)) list.add(expletive);
+                if (word.toLowerCase().contains(expletive)) list.add(expletive);
             }
         }
         return new ArrayList<>(list);
