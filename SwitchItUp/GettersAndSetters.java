@@ -1,10 +1,10 @@
 package SwitchItUp;
 
 public class GettersAndSetters {
-    String firstName;
-    String lastName;
-    int age;
-    String email;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private String email;
     
     public GettersAndSetters() {
     }
